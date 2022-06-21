@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GoEmotions | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Dataset released by Google with text and the emotions detected in those texts" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="text data,multiclass classification,mental health,recommender systems,multilabel classification" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/javascript">
+    window["pageRequestStartTime"] = 1655727378630;
+    window["pageRequestEndTime"] = 1655727378707;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/dataset/5c493139434db3371ed713ee501ed0cfa1ed39e6f808feb59bae312379767830" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=75916b9cccfe514b1d11" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=19bbec36655fd4261b5c" />
+  
+    
+ 
+      <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/dataset/5c493139434db3371ed713ee501ed0cfa1ed39e6f808feb59bae312379767830" />
+    <meta property="og:title" content="GoEmotions" />
+    <meta property="og:description" content="Dataset released by Google with text and the emotions detected in those texts" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/1060121/1783141/9672a452ad86a43465eb0a20b148ed34/dataset-card.jpg?t=2020-12-26-14-08-04" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+        <meta name="twitter:creator" content="@dchanda_" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="HJdrppozz+ayA9+nOISg2A==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"GoEmotions","description":"### Context\nGoEmotions is a corpus of 58k carefully curated comments extracted from Reddit, with human annotations to 27 emotion categories or Neutral.\n\n- Number of examples: 58,009.\n- Number of labels: 27 + Neutral.\n- Maximum sequence length in training and evaluation datasets: 30.\n\n\n### Content\nOn top of the raw data, we also include a version filtered based on reter-agreement, which contains a train/test/validation split:\n\n- Size of training dataset: 43,410.\n- Size of test dataset: 5,427.\n- Size of validation dataset: 5,426.\nThe emotion categories are: admiration, amusement, anger, annoyance, approval, caring, confusion, curiosity, desire, disappointment, disapproval, disgust, embarrassment, excitement, fear, gratitude, grief, joy, love, nervousness, optimism, pride, realization, relief, remorse, sadness, surprise.\n\n`analyze_data.py` and `extract_words.py` have already been run and the output files are stored in `plots` and `tables` respectively.\nWhat's inside is more than just rows and columns. Make it easy for others to get started by describing how you acquired the data and what time period it represents, too.\nOriginal repository from where the data is taken: [https://github.com/google-research/google-research/tree/master/goemotions](https://github.com/google-research/google-research/tree/master/goemotions)\nHowever, some of the scripts were giving errors which have been rectified and updated in this repository: [https://github.com/DebarshiChanda/google-research/tree/master/goemotions](https://github.com/DebarshiChanda/google-research/tree/master/goemotions)\n\n### Acknowledgements\nThe entire Credit for creating this dataset goes to Google Research Team.\n\n\n### Inspiration\nDetect emotion from the text using Multi-label Classification","url":"https://www.kaggle.com/debarshichanda/goemotions","version":6,"keywords":["data type, text data","technique, classification, multiclass classification","subject, health and fitness, health, health conditions, mental health","technique, recommender systems","technique, classification, multilabel classification"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["1060121"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Debarshi Chanda","url":"https://www.kaggle.com/debarshichanda","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4878232-kg.jpeg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/debarshichanda/goemotions/download","contentSize":"18454108 bytes"}],"commentCount":0,"dateModified":"2021-02-18T14:51:22.88Z","discussionUrl":"https://www.kaggle.com/debarshichanda/goemotions/discussion","alternateName":"Dataset released by Google with text and the emotions detected in those texts","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/1060121/1783141/9672a452ad86a43465eb0a20b148ed34/dataset-card.jpg?t=2020-12-26-14-08-04","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":0},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":990},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":7999},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":28}]}</script>
+
+
+  
+    
+
+  
+    
+    
+<script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8Cs-Lz1EcsZJoJpPxm8uGgDOikztAfZB9ZS5JWqEhc2Kd6H7UxqPoxoBDm9uJ_0Z2ex5WbQSNx1QPEK602k_DAZNbvD4gm4R4Oa9SGNbyGtENw',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTU3MjgyNzgsIlVzZXJJZCI6MH0.HqwtLrT8asAaG-Z2iH2PHnK5w5D2OgU1v9P5hC_KqHM',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        enableRapidash: true, 
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    const decodeUserProperty = function (escapedUserProperty) {
+        escapedUserProperty = escapedUserProperty || "";
+        try {
+            const textVersion = new DOMParser().parseFromString(escapedUserProperty, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserProperty;
+    }
+    Kaggle.Current.userDisplayName = decodeUserProperty(Kaggle.Current.userDisplayNameEscaped);
+    Kaggle.Current.userEmail = decodeUserProperty(Kaggle.Current.userEmailEscaped); 
+</script>
+
+    
+
+<script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="HJdrppozz+ayA9+nOISg2A==" src="/static/assets/runtime.js?v=1fa1faef55a3301ae80a" data-turbolinks-track="reload"></script>
+  <script nonce="HJdrppozz+ayA9+nOISg2A==" src="/static/assets/vendor.js?v=1abae0bc5a9d72e7b94f" data-turbolinks-track="reload"></script>
+  <script nonce="HJdrppozz+ayA9+nOISg2A==" src="/static/assets/app.js?v=1b2a6beee1f6de142b72" data-turbolinks-track="reload"></script>
+    <script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="HJdrppozz+ayA9+nOISg2A==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="HJdrppozz+ayA9+nOISg2A==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":1060121,"slug":"goemotions","title":"GoEmotions","description":"### Context\nGoEmotions is a corpus of 58k carefully curated comments extracted from Reddit, with human annotations to 27 emotion categories or Neutral.\n\n- Number of examples: 58,009.\n- Number of labels: 27 \u002B Neutral.\n- Maximum sequence length in training and evaluation datasets: 30.\n\n\n### Content\nOn top of the raw data, we also include a version filtered based on reter-agreement, which contains a train/test/validation split:\n\n- Size of training dataset: 43,410.\n- Size of test dataset: 5,427.\n- Size of validation dataset: 5,426.\nThe emotion categories are: admiration, amusement, anger, annoyance, approval, caring, confusion, curiosity, desire, disappointment, disapproval, disgust, embarrassment, excitement, fear, gratitude, grief, joy, love, nervousness, optimism, pride, realization, relief, remorse, sadness, surprise.\n\n\u0060analyze_data.py\u0060 and \u0060extract_words.py\u0060 have already been run and the output files are stored in \u0060plots\u0060 and \u0060tables\u0060 respectively.\nWhat\u0027s inside is more than just rows and columns. Make it easy for others to get started by describing how you acquired the data and what time period it represents, too.\nOriginal repository from where the data is taken: [https://github.com/google-research/google-research/tree/master/goemotions](https://github.com/google-research/google-research/tree/master/goemotions)\nHowever, some of the scripts were giving errors which have been rectified and updated in this repository: [https://github.com/DebarshiChanda/google-research/tree/master/goemotions](https://github.com/DebarshiChanda/google-research/tree/master/goemotions)\n\n### Acknowledgements\nThe entire Credit for creating this dataset goes to Google Research Team.\n\n\n### Inspiration\nDetect emotion from the text using Multi-label Classification","viewCount":7999,"downloadCount":990,"scriptCount":6,"owner":{"id":4878232,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4878232-kg.jpeg","name":"Debarshi Chanda","profileUrl":"/debarshichanda","slug":"debarshichanda","userTier":"MASTER"},"license":{"id":1,"name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"overview":"Dataset released by Google with text and the emotions detected in those texts","collaboratorList":{"owner":{"userId":4878232,"profileUrl":"/debarshichanda","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4878232-kg.jpeg","name":"Debarshi Chanda","slug":"debarshichanda","userTier":"MASTER","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1060121/1783141/9672a452ad86a43465eb0a20b148ed34/dataset-cover.jpg?t=2020-12-26-14-08-04","data":{"totalSize":18454108,"isFileset":true,"canSeeDownload":true,"firestorePath":"bFVlyELHi2FQa5sadMn5/versions/vR6k79Iit79cy8nQMIch","downloadUrl":"/datasets/5c493139434db3371ed713ee501ed0cfa1ed39e6f808feb59bae312379767830/download?datasetVersionNumber=6","versionId":1995224,"id":1082861},"voteCount":28,"medalUrl":"/static/images/medals/datasets/bronzel@2x.png","downloadUrl":"/datasets/debarshichanda/goemotions/download","lastUpdateTime":"2021-02-18T14:51:22.880Z","datasetVersionNumber":6,"creatorDisplayName":"Debarshi Chanda","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1060121/1783141/9672a452ad86a43465eb0a20b148ed34/dataset-card.jpg?t=2020-12-26-14-08-04","categories":{"tags":[{"id":14104,"name":"text data","fullPath":"data type \u003E text data","listingUrl":"/datasets?group=public\u0026tagids=14104","description":"","datasetCount":2776,"competitionCount":45,"notebookCount":2744,"tagUrl":"/tags/text-data","displayName":"Text Data"},{"id":14202,"name":"multiclass classification","fullPath":"technique \u003E classification \u003E multiclass classification","listingUrl":"/datasets?group=public\u0026tagids=14202","description":"","datasetCount":745,"competitionCount":48,"notebookCount":2631,"tagUrl":"/tags/multiclass-classification","displayName":"Multiclass Classification"},{"id":4171,"name":"mental health","fullPath":"subject \u003E health and fitness \u003E health \u003E health conditions \u003E mental health","listingUrl":"/datasets?group=public\u0026tagids=4171","description":"Mental health is a level of psychological well-being, or an absence of mental illness.","datasetCount":440,"notebookCount":177,"tagUrl":"/tags/mental-health","displayName":"Mental Health"},{"id":13311,"name":"recommender systems","fullPath":"technique \u003E recommender systems","listingUrl":"/datasets?group=public\u0026tagids=13311","description":"","datasetCount":274,"competitionCount":3,"notebookCount":848,"tagUrl":"/tags/recommender-systems","displayName":"Recommender Systems"},{"id":16636,"name":"multilabel classification","fullPath":"technique \u003E classification \u003E multilabel classification","listingUrl":"/datasets?group=public\u0026tagids=16636","description":"","datasetCount":120,"competitionCount":3,"notebookCount":489,"tagUrl":"/tags/multilabel-classification","displayName":"Multilabel Classification"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/debarshichanda/goemotions","ownerTwitter":"dchanda_","forumId":1077173,"datasetVersionId":1956405,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","datasetHashLink":"5c493139434db3371ed713ee501ed0cfa1ed39e6f808feb59bae312379767830","lastVersionNumber":6,"diffType":"VERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script>
+<script nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="HJdrppozz&#x2B;ayA9&#x2B;nOISg2A==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
