@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import glob
 from pandas_profiling import ProfileReport
-from utils.TEIparser import TEIFile
+from src.utils.TEIparser import TEIFile
 import json
 from asyncio.windows_events import NULL
 import os
@@ -35,8 +35,10 @@ def extract_readme_github(readmeFolder):
     html = markdown2.markdown(mdReadme)
     htmlParse = BeautifulSoup(html, 'html.parser')
     print(htmlParse.get_text())
-    readMeGitHub = htmlParse.findChildren(recursive=False)
-    return readMeGitHub
+    readme = htmlParse.get_text()
+    ##for children in  htmlParse.findChildren(recursive=False):
+    ##    readme.append(children.get_text().replace("\n", " "))
+    return readme
 
 def extract_data_profile(dataFolder):
     ## 3 - Get Information from the data
