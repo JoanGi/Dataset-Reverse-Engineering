@@ -6,15 +6,15 @@ from src.schemaOrgMap import SchemaOrgMap
 from src.dataProfileMap import DataProfileMap
 from src.semantincSearch import SemanticSearch
 import json
-import jsonpickle
+
 
 # ----------------------------------------------------------------
 # Variables to fill by the user
 # ----------------------------------------------------------------
 datasetWebsiteURL= 'https://www.kaggle.com/datasets/debarshichanda/goemotions'
-ReadmeSource = 'sources/readmeGithub.md'
-dataFolder = 'sources/data'
-paperPath = 'sources/goEmotionsPaper.pdf.tei.xml' ## Used GORBID to convert PDF to TEI.XML
+ReadmeSource = 'sources/datasets/goEmotions/readmeGithub.md'
+dataFolder = 'sources/datasets/goEmotions/data'
+paperPath = 'sources/datasets/goEmotions/goEmotionsPaper.pdf.tei.xml' ## Used GORBID to convert PDF to TEI.XML
 datasetName = 'goemotions'
 
 # ----------------------------------------------------------------
@@ -61,7 +61,11 @@ naturalText = {
     'readme' : ReadmeText,
     'metadata' : datasetDescription['ToProcessWithNLP']
 } 
+## Using embedding directly 
 datasetDescription = SemanticSearch().search(datasetDescription,naturalText,queries)
+
+## Using Haystack
+
 
 
 ## NLP extractors 

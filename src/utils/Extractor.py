@@ -20,7 +20,7 @@ def extract_schema_org(url):
     ## 1 - EXTRACT FROM THE SEMANTIC OF URL (ONLY APPLIES WEBS CORRECTLY ANNOTATED WITH JOSN-LD SCHEMA.ORG)
     #res = requests.get(url)
     #html = res.text
-    html = open('sources/metadataSchemaOrg.html', 'r').read()
+    html = open('sources/datasets/goEmotions/metadataSchemaOrg.html', 'r').read()
     metadataSchemaOrg = extruct.extract(
             html,
             base_url=get_base_url(html, url),
@@ -44,15 +44,15 @@ def extract_data_profile(dataFolder):
     ## 3 - Get Information from the data
     ### Read the data from sources/data (in .csv) and write a data profile in /sources
     #dataFolder = 'sources/data'
-    if (os.path.exists('sources/dataProfile.json')):
+    if (os.path.exists('sources/datasets/goEmotions/dataProfile.json')):
         print('Data Profile already exists in sources/dataProfile.json, delete it to calculate again')
-        with open('sources/dataProfile.json', 'r') as outfile:
+        with open('sources/datasets/goEmotions/dataProfile.json', 'r') as outfile:
             return json.load(outfile)
     else:
         df = pd.concat(map(pd.read_csv, glob.glob(dataFolder + "/*.csv")))
         profile = ProfileReport(df, title="Pandas Profiling Report")
         json_profile = profile._render_json()
-        with open('sources/dataProfile.json', 'w') as outfile:
+        with open('sources/datasets/goEmotions/dataProfile.json', 'w') as outfile:
             outfile.write(json_profile)
     return json_profile
 
@@ -94,6 +94,6 @@ def extract_data_paper(TEIsource):
         }
     }
     ### Save data well formatted in /sources
-    outfile = open("sources/goEmotionsPaperForNLP.json", "w")
+    outfile = open("sources/datasets/goEmotions/goEmotionsPaperForNLP.json", "w")
     print(json.dumps(paper, indent=4), file=outfile)
     return paper

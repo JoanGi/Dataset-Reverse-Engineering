@@ -33,6 +33,9 @@ class SemanticSearch:
         answer = self.get_passages(naturalText['paper']['test']['full_text'])
         paragraphs = answer['paragraphs']
         passages = answer['passages']
+    
+        Pasoutfile = open('sources/datasets/goEmotions/paper.json', "w")
+        print(json.dumps(passages, indent=2), file=Pasoutfile)
 
         ##
         # Preprocess the readme
@@ -54,6 +57,8 @@ class SemanticSearch:
         print("Paragraphs: ", len(paragraphs))
         print("Sentences: ", sum([len(p) for p in paragraphs]))
         print("Passages: ", len(passages))
+
+        ## Save Text passages
 
         ## Prepare outfile
         outfile = open('out/log.json', "w")

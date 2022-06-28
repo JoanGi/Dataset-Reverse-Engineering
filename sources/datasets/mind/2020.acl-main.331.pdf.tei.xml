@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MIND: A Large-scale Dataset for News Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Association for Computational Linguistics</publisher>
+				<availability status="unknown"><p>Copyright Association for Computational Linguistics</p>
+				</availability>
+				<date type="published" when="2020">2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ying</forename><surname>Qiao</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiun-Hung</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Qi</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianxun</forename><surname>Lian</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Danyang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+							<email>xingx@microsoft.com</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Gao</surname></persName>
+							<email>jfgao@microsoft.com</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Winnie</forename><surname>Wu</surname></persName>
+							<email>winniew@microsoft.com</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ming</forename><surname>Zhou</surname></persName>
+							<email>mingzhou@microsoft.com</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation"><label>§</label> Tsinghua University</note>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MIND: A Large-scale Dataset for News Recommendation</title>
+					</analytic>
+					<monogr>
+						<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+						<meeting>the 58th Annual Meeting of the Association for Computational Linguistics						</meeting>
+						<imprint>
+							<publisher>Association for Computational Linguistics</publisher>
+							<date type="published" when="2020" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">C2DE813B7FAE8969776E72052ADEC56A</idno>
+					<idno type="DOI">10.18653/v1/2020.acl-main.331</idno>
+					<ptr type="open-access" target="https://www.aclweb.org/anthology/2020.acl-main.331.pdf" />
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2-SNAPSHOT" ident="GROBID" when="2022-06-27T14:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>News recommendation is an important technique for personalized news service.</s><s>Compared with product and movie recommendations which have been comprehensively studied, the research on news recommendation is much more limited, mainly due to the lack of a high-quality benchmark dataset.</s><s>In this paper, we present a large-scale dataset named MIND for news recommendation.</s><s>Constructed from the user click logs of Microsoft News, MIND contains 1 million users and more than 160k English news articles, each of which has rich textual content such as title, abstract and body.</s><s>We demonstrate MIND a good testbed for news recommendation through a comparative study of several state-of-the-art news recommendation methods which are originally developed on different proprietary datasets.</s><s>Our results show the performance of news recommendation highly relies on the quality of news content understanding and user interest modeling.</s><s>Many natural language processing techniques such as effective text representation methods and pre-trained language models can effectively improve the performance of news recommendation.</s><s>The MIND dataset will be available at https://msnews.github.io.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p><s>Online news services such as Google News and Microsoft News have become important platforms for a large population of users to obtain news information <ref type="bibr" target="#b5">(Das et al., 2007;</ref><ref type="bibr" target="#b29">Wu et al., 2019a)</ref>.</s><s>Massive news articles are generated and posted online every day, making it difficult for users to find interested news quickly <ref type="bibr" target="#b22">(Okura et al., 2017)</ref>.</s><s>Personalized news recommendation can help users alleviate information overload and improve news reading experience <ref type="bibr" target="#b30">(Wu et al., 2019b)</ref>.</s><s>Thus, it is widely used in many online news platforms <ref type="bibr" target="#b18">(Li et al., 2011;</ref><ref type="bibr" target="#b22">Okura et al., 2017;</ref><ref type="bibr">An et al., 2019)</ref>.</s></p><p><s>In traditional recommender systems, users and items are usually represented using IDs, and their interactions such as rating scores are used to learn ID representations via methods like collaborative filtering <ref type="bibr" target="#b17">(Koren, 2008)</ref>.</s><s>However, news recommendation has some special challenges.</s><s>First, news articles on news websites update very quickly.</s><s>New news articles are posted continuously, and existing news articles will expire in short time <ref type="bibr" target="#b5">(Das et al., 2007)</ref>.</s><s>Thus, the cold-start problem is very severe in news recommendation.</s><s>Second, news articles contain rich textual information such as title and body.</s><s>It is not appropriate to simply representing them using IDs, and it is important to understand their content from their texts <ref type="bibr" target="#b16">(Kompan and Bieliková, 2010)</ref>.</s><s>Third, there is no explicit rating of news articles posted by users on news platforms.</s><s>Thus, in news recommendation users' interest in news is usually inferred from their click behaviors in an implicit way <ref type="bibr" target="#b13">(Ilievski and Roy, 2013)</ref>.</s></p><p><s>A large-scale and high-quality dataset can significantly facilitate the research in an area, such as ImageNet for image classification <ref type="bibr" target="#b6">(Deng et al., 2009)</ref> and SQuAD for machine reading comprehension <ref type="bibr" target="#b24">(Rajpurkar et al., 2016)</ref>.</s><s>There are several public datasets for traditional recommendation tasks, such as Amazon dataset 1 for product recommendation and MovieLens dataset 2 for movie recommendation.</s><s>Based on these datasets, many well-known recommendation methods have been developed.</s><s>However, existing studies on news recommendation are much fewer, and many of them are conducted on proprietary datasets <ref type="bibr" target="#b22">(Okura et al., 2017;</ref><ref type="bibr" target="#b28">Wang et al., 2018;</ref><ref type="bibr" target="#b29">Wu et al., 2019a)</ref>.</s><s>Although there are a few public datasets for news recommendation, they are usually in small size and most of them are not in English.</s><s>Thus, a public large-scale English news recommendation dataset is of great value for the research in this area.</s></p><p><s>In this paper we present a large-scale MIcrosoft News Dataset (MIND) for news recommendation research, which is collected from the user behavior logs of Microsoft News 3 .</s><s>It contains 1 million users and their click behaviors on more than 160k English news articles.</s><s>We implement many state-ofthe-art news recommendation methods originally developed on different proprietary datasets, and compare their performance on the MIND dataset to provide a benchmark for news recommendation research.</s><s>The experimental results show that a deep understanding of news articles through NLP techniques is very important for news recommendation.</s><s>Both effective text representation methods and pre-trained language models can contribute to the performance improvement of news recommendation.</s><s>In addition, appropriate modeling of user interest is also useful.</s><s>We hope MIND can serve as a benchmark dataset for news recommendation and facilitate the research in this area.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Related Work</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">News Recommendation</head><p><s>News recommendation aims to find news articles that users have interest to read from the massive candidate news <ref type="bibr" target="#b5">(Das et al., 2007)</ref>.</s><s>There are two important problems in news recommendation, i.e., how to represent news articles which have rich textual content and how to model users' interest in news from their previous behaviors <ref type="bibr" target="#b22">(Okura et al., 2017)</ref>.</s><s>Traditional news recommendation methods usually rely on feature engineering to represent news articles and user interest <ref type="bibr" target="#b21">(Liu et al., 2010;</ref><ref type="bibr" target="#b26">Son et al., 2013;</ref><ref type="bibr" target="#b14">Karkali et al., 2013;</ref><ref type="bibr" target="#b8">Garcin et al., 2013;</ref><ref type="bibr" target="#b1">Bansal et al., 2015;</ref><ref type="bibr" target="#b3">Chen et al., 2017)</ref>.</s><s>For example, <ref type="bibr" target="#b19">Li et al. (2010)</ref> represented news articles using their URLs and categories, and represented users using their demographics, geographic information and behavior categories inferred from their consumption records on Yahoo!.</s></p><p><s>In recent years, several deep learning based news recommendation methods have been proposed to learn representations of news articles and user interest in an end-to-end manner <ref type="bibr" target="#b22">(Okura et al., 2017;</ref><ref type="bibr" target="#b29">Wu et al., 2019a;</ref><ref type="bibr">An et al., 2019)</ref>.</s><s>For example, <ref type="bibr" target="#b22">Okura et al. (2017)</ref> represented news articles from news content using denoising autoencoder model, and represented user interest from historical clicked news articles with GRU model.</s><s>Their experiments on Yahoo!</s><s>Japan platform show that the news and user representations learned with deep learning models are promising for news recommendation.</s><s><ref type="bibr" target="#b28">Wang et al. (2018)</ref> proposed to learn knowledge-aware news representations from news titles using CNN network by incorporating both word embeddings and the entity embeddings inferred from knowledge graphs.</s><s><ref type="bibr" target="#b29">Wu et al. (2019a)</ref> proposed an attentive multi-view learning framework to represent news articles from different news texts such as title, body and category.</s><s>They used an attention model to infer the interest of users from their clicked news articles by selecting informative ones.</s><s>These works are usually developed and validated on proprietary datasets which are not publicly available, making it difficult for other researchers to verify these methods and develop their own methods.</s></p><p><s>News recommendation has rich inherent relatedness with natural language processing.</s><s>First, news is a common form of texts, and text modeling techniques such as CNN and Transformer can be naturally applied to represent news articles <ref type="bibr" target="#b29">(Wu et al., 2019a;</ref><ref type="bibr" target="#b9">Ge et al., 2020)</ref>.</s><s>Second, learning user interest representation from previously clicked news articles has similarity with learning document representation from its sentences.</s><s>Third, news recommendation can be formulated as a special text matching problem, i.e., the matching between a candidate news article and a set of previously clicked news articles in some news reading interest space.</s><s>Thus, news recommendation has attracted increasing attentions from the NLP community <ref type="bibr">(An et al., 2019;</ref><ref type="bibr" target="#b31">Wu et al., 2019c)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Existing Datasets</head><p><s>There are only a few public datasets for news recommendation, which are summarized in Table <ref type="table" target="#tab_0">1</ref>.</s><s><ref type="bibr" target="#b15">Kille et al. (2013)</ref>  The number of users in this dataset is unknown since there is no user ID.</s><s>In summary, most existing public datasets for news recommendation are non-English, and some of them are small in size and lack original news texts.</s><s>Thus, a high-quality English news recommendation dataset is of great value to the news recommendation community.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3">MIND Dataset</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Dataset Construction</head><p><s>In order to facilitate the research in news recommendation, we built the MIcrosoft News Dataset (MIND) 8 .</s><s>It was collected from the user behavior logs of Microsoft News 9 .</s><s>We randomly sampled 1 million users who had at least 5 news click records during 6 weeks from October 12 to November 22, 2019.</s><s>In order to protect user privacy, each user was de-linked from the production system when securely hashed into an anonymized ID using onetime salt 10 mapping.</s><s>We collected the behavior logs of these users in this period, which are formatted into impression logs.</s><s>where nID is news article ID and label is the click label (1 for click and 0 for non-click).</s><s>We used the samples in the last week for test, and the samples in the fifth week for training.</s><s>For samples in training set, we used the click behaviors in the first four weeks to construct the news click history.</s><s>For samples in test set, the time period for news click history extraction is the first five weeks.</s><s>We only kept the samples with non-empty news click history.</s><s>Among the training data, we used the samples in the last day of the fifth week as validation set.</s><s>Each news article in the MIND dataset contains a news ID, a title, an abstract, a body, and a category label such as "Sports" which is manually tagged by the editors.</s><s>In addition, we found that these news texts contain rich entities.</s><s>For example, in the title of the news article shown in Fig. <ref type="figure">1</ref> "Mike Tomlin: Steelers 'accept responsibility' for role in brawl with Browns", "Mike Tomlin" is a person entity, and "Steelers" and "Browns" are entities of American football team.</s><s>In order to facilitate the research of knowledge-aware news recommendation, we extracted the entities in the titles, abstracts and bodies of the news articles in the MIND dataset, and linked them to the entities in WikiData 11 using an internal NER and entity linking tool.</s><s>We also extracted the knowledge triples of these entities from WikiData and used TransE <ref type="bibr" target="#b2">(Bordes et al., 2013)</ref> method to learn the embeddings of entities and relations.</s><s>These entities, knowledge triples, as well as entity and relation embeddings are also included in the MIND dataset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Dataset Analysis</head><p><s>The detailed statistics of the MIND dataset are summarized in Fig. <ref type="figure">2(d)</ref> shows the survival time distribution of news articles.</s><s>The survival time of a news article is estimated here using the time interval between its first and last appearance time in the dataset.</s><s>We find that the survival time of more than 84.5% news articles is less than two days.</s><s>This is due to the nature of news information, since news media always pursue the latest news and the exiting news articles get out-of-date quickly.</s><s>Thus, cold-start problem is a common phenomenon in news recommendation, and the traditional ID-based recommender systems <ref type="bibr" target="#b17">(Koren, 2008)</ref> are not suitable for this task.</s><s>Representing news articles using their textual content is critical for news recommendation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4">Method</head><p><s>In this section, we briefly introduce several methods for news recommendation, including general recommendation methods and news-specific recommendation methods.</s><s>These methods were developed in different settings and on different datasets.</s><s>Some of their implementations can be found in Microsoft Recommenders open source repository 12 .</s><s>We will compare them on the MIND dataset.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">General Recommendation Methods</head><p><s>LibFM (Rendle, 2012), a classic recommendation method based on factorization machine.</s><s>Besides the user ID and news ID, we also use the content features 13 extracted from previously clicked news and candidate news as the additional features to represent users and candidate news.</s><s>DSSM <ref type="bibr" target="#b12">(Huang et al., 2013)</ref>, deep structured semantic model, which uses tri-gram hashes and multiple feed-forward neural networks for query-document matching.</s><s>We use the content features extracted from previous clicked news as query, and those from candidate news as document.</s><s><ref type="bibr">Wide&amp;Deep (Cheng et al., 2016)</ref>, a two-channel neural recommendation method, which has a wide linear transformation channel and a deep neural network channel.</s><s>We use the same content features of users and candidate news for both channels.</s><s>DeepFM <ref type="bibr" target="#b11">(Guo et al., 2017)</ref>, another popular neural recommendation method which synthesizes deep neural networks and factorization machines.</s><s>The same content features of users and candidate news are fed to both components.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">News Recommendation Methods</head><p><s>DFM <ref type="bibr" target="#b20">(Lian et al., 2018)</ref>, deep fusion model, a news recommendation method which uses an inception network to combine neural networks with different depths to capture the complex interactions between features.</s><s>We use the same features of users and candidate news with aforementioned methods.</s><s>GRU <ref type="bibr" target="#b22">(Okura et al., 2017)</ref>, a neural news recommendation method which uses autoencoder to learn latent news representations from news content, and uses a GRU network to learn user representations from the sequence of clicked news.</s><s>DKN <ref type="bibr" target="#b28">(Wang et al., 2018)</ref>, a knowledge-aware news recommendation method.</s><s>It uses CNN to learn news representations from news titles with both word embeddings and entity embeddings (inferred from knowledge graph), and learns user representations based on the similarity between candidate news and previously clicked news.</s><s>NPA <ref type="bibr" target="#b30">(Wu et al., 2019b)</ref>, a neural news recommendation method with personalized attention mechanism to select important words and news articles based on user preferences to learn more informative news and user representations.</s><s>NAML <ref type="bibr" target="#b29">(Wu et al., 2019a)</ref>, a neural news recommendation method with attentive multi-view learning to incorporate different kinds of news information into the representations of news articles.</s><s>LSTUR <ref type="bibr">(An et al., 2019)</ref>, a neural news recommendation method with long-and short-term user interests.</s><s>It models short-term user interest from recently clicked news with GRU and models longterm user interest from the whole click history.</s><s>NRMS <ref type="bibr" target="#b31">(Wu et al., 2019c)</ref>, a neural news recommendation method which uses multi-head selfattention to learn news representations from the words in news text and learn user representations from previously clicked news articles.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5">Experiments</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1">Experimental Settings</head><p><s>In our experiments, we verify and compare the methods introduced in Section 4 on the MIND dataset.</s><s>Since most of these news recommendation methods are based on news titles, for fair comparison, we only used news titles in experiments unless otherwise mentioned.</s><s>We will explore the usefulness of different news texts such as body in Section 5.3.3.</s><s>In order to simulate the practical news recommendation scenario where we always have unseen users not included in training data, we randomly sampled half of the users for training, and used all the users for test.</s><s>For those methods that need word embeddings, we used the Glove (Pennington et al., 2014) as initialization.</s><s>Adam was used as the optimizer.</s><s>Since the non-clicked news are usually much more than the clicked news in each impression log, following <ref type="bibr" target="#b30">(Wu et al., 2019b)</ref> we applied negative sampling technique to model training.</s><s>All hyper-parameters were selected according to the results on the validation set.</s><s>The metrics used in our experiments are AUC, MRR, nDCG@5 and nDCG@10, which are standard metrics for recommendation result evaluation.</s><s>Each experiment was repeated 10 times.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Performance Comparison</head><p><s>The experimental results of different methods on the MIND dataset are summarized in Table <ref type="table" target="#tab_4">3</ref>.</s><s>We have several findings from the results.</s><s>First, news-specific recommendation methods such as NAML, LSTUR and NRMS usually perform better than general recommendation methods like Wide&amp;Deep, LibFM and DeepFM.</s><s>This is because in these news-specific recommendation methods the representations of news articles and user interest are learned in an end-to-end manner, while in the general recommendation methods they are usually represented using handcrafted features.</s><s>This result validates that learning representations of news content and user interest from raw data using neural networks is more effective than feature engineering.</s><s>The only exception is DFM, which is designed for news recommendation but cannot outperform some general recommendation methods such as DSSM.</s><s>This is because in DFM the features of news and users are also manually designed.</s></p><p><s>Second, among the neural news recommendation methods, NRMS can achieve the best performance.</s><s>NRMS uses multi-head self-attention to capture the relatedness between words to learn news representations, and capture the interactions between previously clicked news articles to learn user representations.</s><s>This result shows that advanced NLP models such as multi-head self-attention can effectively improve the understanding of news content and modeling of user interest.</s><s>The performance of LSTUR is also strong.</s><s>LSTUR can model users' short-term interest from their recently clicked news through a GRU network, and model users' longterm interest from the whole news click history.</s><s>The result shows appropriate modeling of user interest is also important for news recommendation.</s></p><p><s>Third, in terms of the AUC metric, the perfor- mance of news recommendation methods on unseen users is slightly lower than that on overlap users which are included in training data.</s><s>However, the performance on both kinds of users in terms of MRR and nDCG metrics has no significant difference.</s><s>This result indicates that by inferring user interest from the content of their previously clicked news, the news recommendation models trained on part of users can be effectively applied to the remaining users and new users coming in future.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">News Content Understanding</head><p><s>Next, we explore how to learn accurate news representations from textual content.</s><s>Since the MIND dataset is quite large-scale, we randomly sampled 100k samples from both training and test sets for the experiments in this and the following sections.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.1">News Representation Model</head><p><s>First, we compare different text representation methods for learning news representation.</s><s>We select three news recommendation methods which have strong performance, i.e., NAML, LSTUR and NRMS, and replace their original news representation module with different text representation methods, such as LDA, TF-IDF, average of word embed- ding (Avg-Emb), CNN, LSTM and multi-head selfattention (Self-Att).</s><s>Since attention mechanism is an important technique in NLP <ref type="bibr" target="#b32">(Yang et al., 2016)</ref>, we also apply it to the aforementioned neural text representation methods.</s><s>The results are in Table <ref type="table" target="#tab_5">4</ref>.</s></p><p><s>We have several findings from the results.</s><s>First, neural text representation methods such as CNN, Self-Att and LSTM can outperform traditional text representation methods like TF-IDF and LDA.</s><s>This is because the neural text representation models can be learned with the news recommendation task, and they can capture the contexts of texts to generate better news representations.</s><s>Second, Self-Att and LSTM outperform CNN in news representation.</s><s>This is because multi-head self-attention and LSTM can capture long-range contexts of words, while CNN can only model local contexts.</s><s>Third, the attention mechanism can effectively improve the performance of different neural text representation methods such as CNN and LSTM for news recommendation.</s><s>It shows that selecting important words in news texts using attention can help learn more informative news representations.</s><s>Another interesting finding is that the combination of LSTM and attention can achieve the best performance.</s><s>However, to our best knowledge, it is not used in existing news recommendation methods.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.2">Pre-trained Language Models</head><p><s>Next, we explore whether the quality of news representation can be further improved by the pretrained language models such as BERT <ref type="bibr" target="#b7">(Devlin et al., 2019)</ref>, which have achieved huge success in different NLP tasks.</s><s>We applied BERT to the news representation module of three state-of-theart news recommendation methods, i.e., NAML, LSTUR and NRMS.</s><s>The results are summarized in Fig. <ref type="figure" target="#fig_1">3</ref>.</s><s>We find that by replacing the origi- nal word embedding module with the pre-trained BERT model, the performance of different news recommendation methods can be improved.</s><s>It shows the BERT model pre-trained on large-scale corpus like Wikipedia can provide useful semantic information for news representation.</s><s>We also find that fine-tuning the pre-trained BERT model with the news recommendation task can further improve the performance.</s><s>These results validate that the pre-trained language models are very helpful for understanding news articles.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3.3">Different News Information</head><p><s>Next, we explore whether we can learn better news representation by incorporating more news information such as abstract and body.</s><s>We try two methods for news text combination.</s><s>The first one is direct concatenation (denoted as Con), where we combine different news texts into a long document.</s></p><p><s>The second one is attentive multi-view learning (denoted as AMV) <ref type="bibr" target="#b29">(Wu et al., 2019a)</ref>  to learn their representations using different neural networks and model their different contributions using attention mechanisms.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.4">User Interest Modeling</head><p><s>Most of the state-of-the-art news recommendation methods infer users' interest in news from their previously clicked news articles <ref type="bibr" target="#b31">(Wu et al., 2019c;</ref><ref type="bibr">An et al., 2019)</ref>.</s><s>In this section we study the effectiveness of different user interest modeling methods.</s><s>We compare 6 methods, including simple average of the representations of previously clicked news (Average), attention mechanism used in <ref type="bibr" target="#b29">(Wu et al., 2019a)</ref> (Attention), candidate-aware attention used in <ref type="bibr" target="#b28">(Wang et al., 2018)</ref> (Candidate-Att), gated recurrent unit used in <ref type="bibr" target="#b22">(Okura et al., 2017)</ref> (GRU), long-and short-term user representation used in <ref type="bibr">(An et al., 2019)</ref> (LSTUR) and multi-head self-attention used in <ref type="bibr" target="#b31">(Wu et al., 2019c</ref>) (Self-Att).</s></p><p><s>For fair comparison, the news representations in these methods are all generated using LSTM.</s><s>The results are shown in Table <ref type="table" target="#tab_7">6</ref>.</s><s>We find that Attention, Candidate-Att, and GRU all perform better than Average.</s><s>This is because Attention can select informative behaviors to form user representations, Candidate-Att can incorporate the candidate news information to select informative behaviors, and GRU can capture the sequential information of behaviors.</s><s>LSTUR performs better than all above methods, because it can model both long-term and short-term user interest using behaviors in different time ranges.</s><s>Self-Att can also achieve strong performance, because it can model the long-range relatedness between the historical behaviors of users for better user modeling.</s></p><p><s>We also study the influence of click history length on user interest modeling.</s><s>In Fig. <ref type="figure" target="#fig_2">4</ref> we show the performance of three news recommendation methods, i.e., LSTUR, NAML and NRMS, on the users with different lengths of news click history.</s><s>We find that their performance in general improves on the users with more news click records.</s><s>This result is intuitive, because more news click records can provide more clues for user interest modeling.</s><s>The results also show it is quite challenging to infer the interest of users whose behaviors on the news platform are scarce, i.e., the cold-start users.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Conclusion and Discussion</head><p><s>In this paper we present the MIND dataset for news recommendation research, which is constructed from user behavior logs of Microsoft News.</s><s>It contains 1 million users and more than 160k English news articles with rich textual content such as title, abstract and body.</s><s>We conduct extensive experiments on this dataset.</s><s>The results show the importance of accurate news content understanding and user interest modeling for news recommendation.</s><s>Many natural language processing and machine learning techniques such as text modeling, attention mechanism and pre-trained language models can contribute to the performance improvement of news recommendation.</s></p><p><s>In the future, we plan to extend the MIND dataset by incorporating image and video information in news as well as news in different languages, which can support the research of multi-modal and multi-lingual news recommendation.</s><s>In addition, besides the click behaviors, we plan to incorporate other user behaviors such as read and engagement to support more accurate user modeling and performance evaluation.</s><s>Many interesting researches can be conducted on the MIND dataset, such as designing better news and user modeling methods, improving the diversity, fairness and explainability of news recommendation results, and exploring privacy-preserving news recommendation.</s><s>Besides news recommendation, the MIND dataset can also be used in other natural language processing tasks such as topic classification, text summarization and news headline generation.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Title</head><label></label><figDesc><div><p><s>Figure 1: An example homepage of Microsoft News and an example news article on it.</s></p></div></figDesc><graphic coords="2,78.38,63.17,211.05,136.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 3 :</head><label>3</label><figDesc><div><p><s>Figure 3: BERT for news representation.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 4 :</head><label>4</label><figDesc><div><p><s>Figure 4: Users with different numbers of clicked news.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 :</head><label>1</label><figDesc><div><p><s>Comparisons of the MIND dataset and the existing public news recommendation datasets.</s></p></div></figDesc><table><row><cell cols="2">Dataset Language</cell><cell># Users</cell><cell># News</cell><cell># Clicks</cell><cell>News information</cell></row><row><cell>Plista</cell><cell>German</cell><cell cols="2">Unknown 70,353</cell><cell cols="2">1,095,323 title, body</cell></row><row><cell cols="6">Adressa Norwegian 3,083,438 48,486 27,223,576 title, body, category</cell></row><row><cell cols="3">Globo Portuguese 314,000</cell><cell>46,000</cell><cell cols="2">3,000,000 no original text, only word embeddings</cell></row><row><cell>Yahoo!</cell><cell>English</cell><cell cols="2">Unknown 14,180</cell><cell>34,022</cell><cell>no original text, only word IDs</cell></row><row><cell>MIND</cell><cell>English</cell><cell cols="4">1,000,000 161,013 24,155,470 title, abstract, body, category</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc><div><p><s>Moreira et al., 2018)this dataset are in Norwegian.Moreira et al. (2018)constructed a news recommendation dataset 6 from Globo.com, a popular news portal in Brazil.This dataset contains about 314,000 users, 46,000 news articles and 3 million click records.Each click record contains fields like user ID, news ID and session time.Each news article has ID, category, publisher, creation time, and the embeddings of its words generated by a neural model pre-trained on a news metadata classification task (de Souza PereiraMoreira et al., 2018).</s><s>However, the original texts of news articles are not provided.</s><s>In addition, this dataset is in Portuguese.</s><s>There is a Yahoo!</s><s>dataset 7 for session-based news recommendation.</s><s>It contains 14,180 news articles and 34,022 click events. E</s><s>ch news article is represented by word IDs, and the original news text is not provided.</s></p></div></figDesc><table><row><cell>constructed the Plista 4 dataset</cell></row><row><cell>by collecting news articles published on 13 Ger-</cell></row><row><cell>man news portals and users' click logs on them. It</cell></row><row><cell>contains 70,353 news articles and 1,095,323 click</cell></row><row><cell>events. The news articles in this dataset are in</cell></row><row><cell>German and the users are mainly from the German-</cell></row></table><note><p><s>Gulla et al. (2017)a et al. (2017)released the Adressa dataset 5 , which was constructed from the logs of the Adresseavisen website in ten weeks.</s><s>It has 48,486 news articles, 3,083,438 users and 27,223,576 click events.</s><s>Each click event contains several features, such as session time, news title, news category and user ID. E</s><s>ch news article is associated with some detailed information such as authors, entities and body.</s></p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head></head><label></label><figDesc><div><p><s>An impression log records the news articles displayed to a user when she visits the news website homepage at a specific time, and her click behaviors on these news articles.</s><s>Since in news recommendation we usually predict whether a user will click a candidate news article or not based on her personal interest inferred from her previous behaviors, we add the news click histories of users to their impression logs to construct labeled samples for training and verifying news recommendation models.</s><s>The format of each labeled sample is [uID, t, ClickHist, ImpLog], where uID is the anonymous ID of a user, and t is the timestamp of this impression.</s><s>ClickHist is an ID list of the news articles previously clicked by this user (sorted by click time).</s><s>ImpLog contains the IDs of the news articles displayed in this impression and the labels indicating whether they are clicked, i.e., [(nID 1 , label 1 ), (nID 2 , label 2 ), ...],</s></p></div></figDesc><table /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3"><head>Table 2 :</head><label>2</label><figDesc><div><p><s>Table 2 and Fig. 2.</s><s>This dataset contains 1,000,000 users and 161,013 news articles.</s><s>There Detailed statistics of the MIND dataset.</s></p></div></figDesc><table><row><cell>11 https://www.wikidata.org/wiki/Wikidata:MainPage</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 3 :</head><label>3</label><figDesc><div><p><s>Results on the test set of the MIND dataset.</s><s>Overlap users mean the users included in training set.</s></p></div></figDesc><table><row><cell></cell><cell></cell><cell cols="2">Overall</cell><cell></cell><cell></cell><cell cols="2">Overlap Users</cell><cell></cell><cell></cell><cell cols="2">Unseen Users</cell></row><row><cell></cell><cell>AUC</cell><cell>MRR</cell><cell>nDCG@5</cell><cell>nDCG@10</cell><cell>AUC</cell><cell>MRR</cell><cell>nDCG@5</cell><cell>nDCG@10</cell><cell>AUC</cell><cell>MRR</cell><cell>nDCG@5</cell><cell>nDCG@10</cell></row><row><cell>LibFM</cell><cell cols="3">59.93 28.23 30.05</cell><cell>35.74</cell><cell cols="3">60.23 28.08 29.94</cell><cell>35.66</cell><cell cols="3">59.72 28.35 30.14</cell><cell>35.81</cell></row><row><cell>DSSM</cell><cell cols="3">64.31 30.47 33.86</cell><cell>38.61</cell><cell cols="3">64.70 30.39 32.84</cell><cell>38.62</cell><cell cols="3">64.02 30.53 33.88</cell><cell>38.61</cell></row><row><cell cols="4">Wide&amp;Deep 62.16 29.31 31.38</cell><cell>37.12</cell><cell cols="3">62.53 29.22 31.33</cell><cell>37.11</cell><cell cols="3">61.89 29.38 31.41</cell><cell>37.13</cell></row><row><cell>DeepFM</cell><cell cols="3">60.30 28.19 30.02</cell><cell>35.71</cell><cell cols="3">60.58 28.05 29.91</cell><cell>35.62</cell><cell cols="3">60.10 28.31 30.10</cell><cell>35.77</cell></row><row><cell>DFM</cell><cell cols="3">62.28 29.42 31.52</cell><cell>37.22</cell><cell cols="3">62.62 29.30 31.45</cell><cell>37.18</cell><cell cols="3">62.03 29.50 31.57</cell><cell>37.25</cell></row><row><cell>GRU</cell><cell cols="3">65.42 31.24 33.76</cell><cell>39.47</cell><cell cols="3">65.80 31.15 33.73</cell><cell>39.47</cell><cell cols="3">65.14 31.31 33.78</cell><cell>39.46</cell></row><row><cell>DKN</cell><cell cols="3">64.60 31.32 33.84</cell><cell>39.48</cell><cell cols="3">64.88 31.19 33.76</cell><cell>39.43</cell><cell cols="3">64.40 31.42 33.89</cell><cell>39.52</cell></row><row><cell>NPA</cell><cell cols="3">66.69 32.24 34.98</cell><cell>40.68</cell><cell cols="3">67.10 32.18 35.00</cell><cell>40.72</cell><cell cols="3">66.39 32.29 34.97</cell><cell>40.65</cell></row><row><cell>NAML</cell><cell cols="3">66.86 32.49 35.24</cell><cell>40.91</cell><cell cols="3">67.15 32.36 35.17</cell><cell>40.88</cell><cell cols="3">66.65 32.58 35.28</cell><cell>40.94</cell></row><row><cell>LSTUR</cell><cell cols="3">67.73 32.77 35.59</cell><cell>41.34</cell><cell cols="3">68.13 32.70 35.59</cell><cell>41.38</cell><cell cols="3">67.43 32.82 35.58</cell><cell>41.31</cell></row><row><cell>NRMS</cell><cell cols="3">67.76 33.05 35.94</cell><cell>41.63</cell><cell cols="3">68.23 33.05 36.03</cell><cell>41.74</cell><cell cols="3">67.41 33.05 35.88</cell><cell>41.55</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 4 :</head><label>4</label><figDesc><div><p><s>Different news representation methods.</s><s>Att means attention mechanism.</s></p></div></figDesc><table><row><cell></cell><cell cols="2">NAML</cell><cell cols="2">LSTUR</cell><cell cols="2">NRMS</cell></row><row><cell></cell><cell>AUC</cell><cell>nDCG@10</cell><cell>AUC</cell><cell>nDCG@10</cell><cell>AUC</cell><cell>nDCG@10</cell></row><row><cell>LDA</cell><cell cols="2">54.29 31.88</cell><cell cols="2">53.27 30.41</cell><cell cols="2">52.93 30.50</cell></row><row><cell>TF-IDF</cell><cell cols="2">56.07 33.06</cell><cell cols="2">55.53 32.32</cell><cell cols="2">55.43 32.31</cell></row><row><cell>Avg-Emb</cell><cell cols="2">57.97 34.29</cell><cell cols="2">61.06 36.10</cell><cell cols="2">61.10 36.49</cell></row><row><cell>Attention</cell><cell cols="2">60.76 36.80</cell><cell cols="2">64.95 39.06</cell><cell cols="2">65.31 39.66</cell></row><row><cell>CNN</cell><cell cols="2">63.10 38.07</cell><cell cols="2">64.76 39.04</cell><cell cols="2">64.77 39.10</cell></row><row><cell>CNN+Att</cell><cell cols="2">65.10 39.53</cell><cell cols="2">65.86 39.93</cell><cell cols="2">66.05 40.10</cell></row><row><cell>Self-Att.</cell><cell cols="2">65.46 39.89</cell><cell cols="2">65.64 39.81</cell><cell cols="2">65.91 40.02</cell></row><row><cell cols="3">Self-Att+Att 65.60 40.05</cell><cell cols="2">65.91 39.91</cell><cell cols="2">66.22 40.23</cell></row><row><cell>LSTM</cell><cell cols="2">65.20 39.66</cell><cell cols="2">65.88 39.87</cell><cell cols="2">66.27 40.21</cell></row><row><cell cols="3">LSTM+Att 66.17 40.23</cell><cell cols="2">66.37 40.31</cell><cell cols="2">66.91 40.85</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>Table 6 :</head><label>6</label><figDesc><div><p><s>Different user modeling methods.</s></p></div></figDesc><table><row><cell>which models</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1">http://jmcauley.ucsd.edu/data/amazon/ 2 https://grouplens.org/datasets/movielens/</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3">https://microsoftnews.msn.com/</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4">http://www.newsreelchallenge.org/dataset/ 5 http://reclab.idi.ntnu.no/dataset/ 6 https://www.kaggle.com/gspmoreira/news-portal-userinteractions-by-globocom</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7">https://webscope.sandbox.yahoo.com/catalog.php?datatype=l 8 It is public available at https://msnews.github.io for research purpose. Any question about this dataset can be sent to mind@microsoft.com. 9 https://microsoftnews.msn.com 10 https://en.wikipedia.org/wiki/Salt (cryptography)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="12">https://github.com/microsoft/recommenders13  The content features used in our experiments are TF-IDF features extracted from news texts.</note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgments</head><p><s>We would like to thank Xi Chen, Virl Hill, Jesse Pannoni, Sally Salas and Ting Cai in the Microsoft News team for their great support in releasing this dataset and for their great help in preparing the data.</s><s>We also want to thank Le Zhang, Miguel Gonzalez-Fierro and Tao Wu at Microsoft Azure for their support in Microsoft Recommenders repository and Azure resource.</s><s>Finally, we thank Jingwei Yi and Ling Luo for their help on experiments.</s></p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Neural News Recommendation with Long- and Short-term User Representations</title>
+		<author>
+			<persName><forename type="first">Mingxiao</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kun</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/p19-1033</idno>
+		<ptr type="open-access" target="https://www.aclweb.org/anthology/P19-1033.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+				<meeting>the 57th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="336" to="345" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Mingxiao An, Fangzhao Wu, Chuhan Wu, Kun Zhang, Zheng Liu, and Xing Xie. 2019. Neural news recom- mendation with long-and short-term user representa- tions. In ACL, pages 336-345.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Content Driven User Profiling for Comment-Worthy Recommendations of News and Blog Articles</title>
+		<author>
+			<persName><forename type="first">Trapit</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mrinal</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chiranjib</forename><surname>Bhattacharyya</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2792838.2800186</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 9th ACM Conference on Recommender Systems</title>
+				<editor>
+			<persName><surname>Recsys</surname></persName>
+		</editor>
+		<meeting>the 9th ACM Conference on Recommender Systems</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2015-09-16">2015</date>
+			<biblScope unit="page" from="195" to="202" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Trapit Bansal, Mrinal Das, and Chiranjib Bhat- tacharyya. 2015. Content driven user profiling for comment-worthy recommendations of news and blog articles. In RecSys., pages 195-202. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A semantic matching energy function for learning with multi-relational data</title>
+		<author>
+			<persName><forename type="first">Antoine</forename><surname>Bordes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Glorot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Weston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10994-013-5363-6</idno>
+		<ptr type="open-access" target="https://link.springer.com/content/pdf/10.1007%2Fs10994-013-5363-6.pdf" />
+	</analytic>
+	<monogr>
+		<title level="j">Machine Learning</title>
+		<title level="j" type="abbrev">Mach Learn</title>
+		<idno type="ISSN">0885-6125</idno>
+		<idno type="ISSNe">1573-0565</idno>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="233" to="259" />
+			<date type="published" when="2013-05-30">2013</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Antoine Bordes, Nicolas Usunier, Alberto Garcia- Duran, Jason Weston, and Oksana Yakhnenko. 2013. Translating embeddings for modeling multi- relational data. In NIPS, pages 2787-2795.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Location-Aware Personalized News Recommendation With Deep Semantic Analysis</title>
+		<author>
+			<persName><forename type="first">Cheng</forename><surname>Chen</surname></persName>
+			<idno type="ORCID">0000-0002-9374-4193</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangwu</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenghua</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lukasiewicz</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/access.2017.2655150</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<title level="j" type="abbrev">IEEE Access</title>
+		<idno type="ISSNe">2169-3536</idno>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1624" to="1638" />
+			<date type="published" when="2017">2017</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cheng Chen, Xiangwu Meng, Zhenghua Xu, and Thomas Lukasiewicz. 2017. Location-aware per- sonalized news recommendation with deep semantic analysis. IEEE Access, 5:1624-1638.</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Wide &amp; Deep Learning for Recommender Systems</title>
+		<author>
+			<persName><forename type="first">Heng-Tze</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Levent</forename><surname>Koc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremiah</forename><surname>Harmsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tal</forename><surname>Shaked</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tushar</forename><surname>Chandra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hrishi</forename><surname>Aradhye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Glen</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Corrado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mustafa</forename><surname>Ispir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rohan</forename><surname>Anil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zakaria</forename><surname>Haque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lichan</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vihan</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaobing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hemal</forename><surname>Shah</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2988450.2988454</idno>
+		<ptr type="open-access" target="http://dl.acm.org/ft_gateway.cfm?id=2988454&amp;type=pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 1st Workshop on Deep Learning for Recommender Systems</title>
+				<meeting>the 1st Workshop on Deep Learning for Recommender Systems</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2016-09-15">2016</date>
+			<biblScope unit="page" from="7" to="10" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra, Hrishi Aradhye, Glen An- derson, Greg Corrado, Wei Chai, Mustafa Ispir, et al. 2016. Wide &amp; deep learning for recommender sys- tems. In DLRS, pages 7-10. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Google news personalization</title>
+		<author>
+			<persName><forename type="first">Abhinandan</forename><forename type="middle">S</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mayur</forename><surname>Datar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ashutosh</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shyam</forename><surname>Rajaram</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1242572.1242610</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 16th international conference on World Wide Web - WWW &apos;07</title>
+				<meeting>the 16th international conference on World Wide Web - WWW &apos;07</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="271" to="280" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Abhinandan S Das, Mayur Datar, Ashutosh Garg, and Shyam Rajaram. 2007. Google news personaliza- tion: scalable online collaborative filtering. In WWW, pages 271-280. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">ImageNet: A large-scale hierarchical image database</title>
+		<author>
+			<persName><forename type="first">Jia</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li-Jia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kai Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li Fei-Fei</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/cvpr.2009.5206848</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2009 IEEE Conference on Computer Vision and Pattern Recognition</title>
+				<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2009-06">2009</date>
+			<biblScope unit="page" from="248" to="255" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. 2009. Imagenet: A large-scale hierarchical image database. In CVPR, pages 248- 255.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main"></title>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Wei</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenton</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristina</forename><surname>Toutanova</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/n19-1423</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference of the North</title>
+				<meeting>the 2019 Conference of the North</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="4171" to="4186" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. Bert: Pre-training of deep bidirectional transformers for language understand- ing. In NAACL-HLT, pages 4171-4186.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Personalized news recommendation with context trees</title>
+		<author>
+			<persName><forename type="first">Florent</forename><surname>Garcin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christos</forename><surname>Dimitrakakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Boi</forename><surname>Faltings</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2507157.2507166</idno>
+		<ptr type="open-access" target="https://infoscience.epfl.ch/record/190512/files/garcin078.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 7th ACM conference on Recommender systems</title>
+				<editor>
+			<persName><surname>Recsys</surname></persName>
+		</editor>
+		<meeting>the 7th ACM conference on Recommender systems</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2013-10-12">2013</date>
+			<biblScope unit="page" from="105" to="112" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Florent Garcin, Christos Dimitrakakis, and Boi Falt- ings. 2013. Personalized news recommendation with context trees. In RecSys., pages 105-112.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Graph Enhanced Representation Learning for News Recommendation</title>
+		<author>
+			<persName><forename type="first">Suyu</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongfeng</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3366423.3380050</idno>
+		<ptr type="open-access" target="http://arxiv.org/pdf/2003.14292" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The Web Conference 2020</title>
+				<meeting>The Web Conference 2020</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2020-04-19">2020</date>
+			<biblScope unit="page" from="2863" to="2869" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Suyu Ge, Chuhan Wu, Fangzhao Wu, Tao Qi, and Yongfeng Huang. 2020. Graph enhanced represen- tation learning for news recommendation. In WWW, pages 2863--2869.</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The Adressa dataset for news recommendation</title>
+		<author>
+			<persName><forename type="first">Jon</forename><forename type="middle">Atle</forename><surname>Gulla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lemei</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Özlem</forename><surname>Özgöbek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaomeng</forename><surname>Su</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3106426.3109436</idno>
+		<ptr type="open-access" target="http://dl.acm.org/ft_gateway.cfm?id=3109436&amp;type=pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Web Intelligence</title>
+				<meeting>the International Conference on Web Intelligence</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2017-08-23">2017</date>
+			<biblScope unit="page" from="1042" to="1048" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jon Atle Gulla, Lemei Zhang, Peng Liu, Özlem Özgöbek, and Xiaomeng Su. 2017. The adressa dataset for news recommendation. In Proceedings of the international conference on web intelligence, pages 1042-1048. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">DeepFM: A Factorization-Machine based Neural Network for CTR Prediction</title>
+		<author>
+			<persName><forename type="first">Huifeng</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruiming</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunming</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenguo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiuqiang</forename><surname>He</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2017/239</idno>
+		<ptr type="open-access" target="https://www.ijcai.org/proceedings/2017/0239.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence</title>
+				<meeting>the Twenty-Sixth International Joint Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<publisher>International Joint Conferences on Artificial Intelligence Organization</publisher>
+			<date type="published" when="2017-08">2017</date>
+			<biblScope unit="page" from="1725" to="1731" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Huifeng Guo, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. 2017. Deepfm: a factorization- machine based neural network for ctr prediction. In AAAI, pages 1725-1731. AAAI Press.</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Learning deep structured semantic models for web search using clickthrough data</title>
+		<author>
+			<persName><forename type="first">Po-Sen</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianfeng</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Acero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Larry</forename><surname>Heck</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2505515.2505665</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 22nd ACM international conference on Conference on information &amp; knowledge management - CIKM &apos;13</title>
+				<meeting>the 22nd ACM international conference on Conference on information &amp; knowledge management - CIKM &apos;13</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="2333" to="2338" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Po-Sen Huang, Xiaodong He, Jianfeng Gao, Li Deng, Alex Acero, and Larry Heck. 2013. Learning deep structured semantic models for web search using clickthrough data. In CIKM, pages 2333-2338.</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Personalized news recommendation based on implicit feedback</title>
+		<author>
+			<persName><forename type="first">Ilija</forename><surname>Ilievski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sujoy</forename><surname>Roy</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2516641.2516644</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 International News Recommender Systems Workshop and Challenge on - NRS &apos;13</title>
+				<meeting>the 2013 International News Recommender Systems Workshop and Challenge on - NRS &apos;13</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="10" to="15" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ilija Ilievski and Sujoy Roy. 2013. Personalized news recommendation based on implicit feedback. In Proceedings of the 2013 international news recom- mender systems workshop and challenge, pages 10- 15. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Match the news</title>
+		<author>
+			<persName><forename type="first">Margarita</forename><surname>Karkali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Pontikis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michalis</forename><surname>Vazirgiannis</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2484028.2484208</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</title>
+				<meeting>the 36th international ACM SIGIR conference on Research and development in information retrieval</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2013-07-28">2013</date>
+			<biblScope unit="page" from="1117" to="1118" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Margarita Karkali, Dimitris Pontikis, and Michalis Vazirgiannis. 2013. Match the news: A firefox ex- tension for real-time news recommendation. In SI- GIR, pages 1117-1118. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The plista dataset</title>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Kille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frank</forename><surname>Hopfgartner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Torben</forename><surname>Brodt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tobias</forename><surname>Heintz</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2516641.2516643</idno>
+		<ptr type="open-access" target="https://depositonce.tu-berlin.de/bitstream/11303/7581/4/2013_hopfgartner_etal.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2013 International News Recommender Systems Workshop and Challenge on - NRS &apos;13</title>
+				<meeting>the 2013 International News Recommender Systems Workshop and Challenge on - NRS &apos;13</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="16" to="23" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Benjamin Kille, Frank Hopfgartner, Torben Brodt, and Tobias Heintz. 2013. The plista dataset. In Pro- ceedings of the 2013 international news recom- mender systems workshop and challenge, pages 16- 23. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Content-Based News Recommendation</title>
+		<author>
+			<persName><forename type="first">Michal</forename><surname>Kompan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mária</forename><surname>Bieliková</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-642-15208-5_6</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Lecture Notes in Business Information Processing</title>
+				<imprint>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="61" to="72" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Michal Kompan and Mária Bieliková. 2010. Content- based news recommendation. In International con- ference on electronic commerce and web technolo- gies, pages 61-72. Springer.</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Factorization meets the neighborhood</title>
+		<author>
+			<persName><forename type="first">Yehuda</forename><surname>Koren</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1401890.1401944</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceeding of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining - KDD 08</title>
+				<meeting>eeding of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining - KDD 08</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2008">2008</date>
+			<biblScope unit="page" from="426" to="434" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yehuda Koren. 2008. Factorization meets the neighbor- hood: a multifaceted collaborative filtering model. In KDD, pages 426-434.</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Personalized News Recommendation: A Review and an Experimental Investigation</title>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ding-Ding</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shun-Zhi</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11390-011-0175-2</idno>
+		<idno type="ark">ark:/67375/VQC-VRW39W2D-G</idno>
+		<idno type="istexId">BC209E01A4380F62A26FB77F9772E11C1A23668D</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computer Science and Technology</title>
+		<title level="j" type="abbrev">J. Comput. Sci. Technol.</title>
+		<idno type="ISSN">1000-9000</idno>
+		<idno type="ISSNe">1860-4749</idno>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="754" to="766" />
+			<date type="published" when="2011-09">2011</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lei Li, Ding-Ding Wang, Shun-Zhi Zhu, and Tao Li. 2011. Personalized news recommendation: a review and an experimental investigation. Journal of com- puter science and technology, 26(5):754.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A contextual-bandit approach to personalized news article recommendation</title>
+		<author>
+			<persName><forename type="first">Lihong</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Langford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><forename type="middle">E</forename><surname>Schapire</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1772690.1772758</idno>
+		<ptr type="open-access" target="http://arxiv.org/pdf/1003.0146" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 19th international conference on World wide web - WWW &apos;10</title>
+				<meeting>the 19th international conference on World wide web - WWW &apos;10</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="661" to="670" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lihong Li, Wei Chu, John Langford, and Robert E Schapire. 2010. A contextual-bandit approach to personalized news article recommendation. In WWW, pages 661-670. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Towards Better Representation Learning for Personalized News Recommendation: a Multi-Channel Deep Fusion Approach</title>
+		<author>
+			<persName><forename type="first">Jianxun</forename><surname>Lian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fuzheng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guangzhong</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2018/529</idno>
+		<ptr type="open-access" target="https://www.ijcai.org/proceedings/2018/0529.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence</title>
+				<meeting>the Twenty-Seventh International Joint Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<publisher>International Joint Conferences on Artificial Intelligence Organization</publisher>
+			<date type="published" when="2018-07">2018</date>
+			<biblScope unit="page" from="3805" to="3811" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jianxun Lian, Fuzheng Zhang, Xing Xie, and Guangzhong Sun. 2018. Towards better represen- tation learning for personalized news recommenda- tion: a multi-channel deep fusion approach. In IJ- CAI, pages 3805-3811.</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Personalized news recommendation based on click behavior</title>
+		<author>
+			<persName><forename type="first">Jiahui</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elin</forename><forename type="middle">Rønby</forename><surname>Pedersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1719970.1719976</idno>
+		<ptr type="open-access" target="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/pubs/archive/35599.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th international conference on Intelligent user interfaces - IUI &apos;10</title>
+				<meeting>the 15th international conference on Intelligent user interfaces - IUI &apos;10</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="31" to="40" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jiahui Liu, Peter Dolan, and Elin Rønby Pedersen. 2010. Personalized news recommendation based on click behavior. In IUI, pages 31-40. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Embedding-based News Recommendation for Millions of Users</title>
+		<author>
+			<persName><forename type="first">Shumpei</forename><surname>Okura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yukihiro</forename><surname>Tagami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shingo</forename><surname>Ono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akira</forename><surname>Tajima</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3097983.3098108</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</title>
+				<meeting>the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2017-08-13">2017</date>
+			<biblScope unit="page" from="1933" to="1942" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Shumpei Okura, Yukihiro Tagami, Shingo Ono, and Akira Tajima. 2017. Embedding-based news rec- ommendation for millions of users. In KDD, pages 1933-1942. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Glove: Global Vectors for Word Representation</title>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/v1/d14-1162</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</title>
+				<meeting>the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1532" to="1543" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014. Glove: Global vectors for word rep- resentation. In EMNLP, pages 1532-1543.</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">SQuAD: 100,000+ Questions for Machine Comprehension of Text</title>
+		<author>
+			<persName><forename type="first">Pranav</forename><surname>Rajpurkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Konstantin</forename><surname>Lopyrev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><surname>Liang</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/d16-1264</idno>
+		<ptr type="open-access" target="http://arxiv.org/pdf/1606.05250" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing</title>
+				<meeting>the 2016 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="2383" to="2392" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. 2016. Squad: 100,000+ questions for machine comprehension of text. In EMNLP, pages 2383-2392.</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Factorization Machines with libFM</title>
+		<author>
+			<persName><surname>Steffen Rendle</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2168752.2168771</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Transactions on Intelligent Systems and Technology</title>
+		<title level="j" type="abbrev">ACM Trans. Intell. Syst. Technol.</title>
+		<idno type="ISSN">2157-6904</idno>
+		<idno type="ISSNe">2157-6912</idno>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="22" />
+			<date type="published" when="2012-05">2012</date>
+			<publisher>Association for Computing Machinery (ACM)</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Steffen Rendle. 2012. Factorization machines with libfm. TIST, 3(3):57:1-57:22.</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">A location-based news article recommendation with explicit localized semantic analysis</title>
+		<author>
+			<persName><forename type="first">Jeong-Woo</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seong-Bae</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2484028.2484064</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval</title>
+				<meeting>the 36th international ACM SIGIR conference on Research and development in information retrieval</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2013-07-28">2013</date>
+			<biblScope unit="page" from="293" to="302" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jeong-Woo Son, A Kim, Seong-Bae Park, et al. 2013. A location-based news article recommendation with explicit localized semantic analysis. In SIGIR, pages 293-302. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">News Session-Based Recommendations using Deep Neural Networks</title>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>De Souza Pereira Moreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Felipe</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adilson</forename><forename type="middle">Marques</forename><surname>Da Cunha</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3270323.3270328</idno>
+		<ptr type="open-access" target="http://arxiv.org/pdf/1808.00076" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 3rd Workshop on Deep Learning for Recommender Systems</title>
+				<meeting>the 3rd Workshop on Deep Learning for Recommender Systems</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2018-10-06">2018</date>
+			<biblScope unit="page" from="15" to="23" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gabriel de Souza Pereira Moreira, Felipe Ferreira, and Adilson Marques da Cunha. 2018. News session- based recommendations using deep neural networks. In DLRS, pages 15-23. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">DKN</title>
+		<author>
+			<persName><forename type="first">Hongwei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fuzheng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minyi</forename><surname>Guo</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3178876.3186175</idno>
+		<ptr type="open-access" target="http://dl.acm.org/ft_gateway.cfm?id=3186175&amp;type=pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 World Wide Web Conference on World Wide Web - WWW &apos;18</title>
+				<meeting>the 2018 World Wide Web Conference on World Wide Web - WWW &apos;18</meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="1835" to="1844" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hongwei Wang, Fuzheng Zhang, Xing Xie, and Minyi Guo. 2018. Dkn: Deep knowledge-aware network for news recommendation. In WWW, pages 1835- 1844.</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Neural News Recommendation with Attentive Multi-View Learning</title>
+		<author>
+			<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingxiao</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianqiang</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongfeng</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2019/536</idno>
+		<ptr type="open-access" target="https://www.ijcai.org/proceedings/2019/0536.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence</title>
+				<meeting>the Twenty-Eighth International Joint Conference on Artificial Intelligence</meeting>
+		<imprint>
+			<publisher>International Joint Conferences on Artificial Intelligence Organization</publisher>
+			<date type="published" when="2019-08">2019a</date>
+			<biblScope unit="page" from="3863" to="3869" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Chuhan Wu, Fangzhao Wu, Mingxiao An, Jianqiang Huang, Yongfeng Huang, and Xing Xie. 2019a. Neural news recommendation with attentive multi- view learning. In IJCAI-19, pages 3863-3869.</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Neural News Recommendation with Topic-Aware News Representation</title>
+		<author>
+			<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingxiao</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongfeng</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/p19-1110</idno>
+		<ptr type="open-access" target="https://www.aclweb.org/anthology/P19-1110.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+				<meeting>the 57th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019b</date>
+			<biblScope unit="page" from="2576" to="2584" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Chuhan Wu, Fangzhao Wu, Mingxiao An, Jianqiang Huang, Yongfeng Huang, and Xing Xie. 2019b. Npa: Neural news recommendation with personal- ized attention. In KDD, pages 2576-2584. ACM.</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Neural News Recommendation with Multi-Head Self-Attention</title>
+		<author>
+			<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fangzhao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suyu</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongfeng</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xing</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/d19-1671</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+				<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019c</date>
+			<biblScope unit="page" from="6390" to="6395" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Chuhan Wu, Fangzhao Wu, Suyu Ge, Tao Qi, Yongfeng Huang, and Xing Xie. 2019c. Neu- ral news recommendation with multi-head self- attention. In EMNLP-IJCNLP, pages 6390-6395.</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Hierarchical Attention Networks for Document Classification</title>
+		<author>
+			<persName><forename type="first">Zichao</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diyi</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Dyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Smola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eduard</forename><surname>Hovy</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/n16-1174</idno>
+		<ptr type="open-access" target="https://www.aclweb.org/anthology/N16-1174.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+				<meeting>the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1480" to="1489" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Zichao Yang, Diyi Yang, Chris Dyer, Xiaodong He, Alex Smola, and Eduard Hovy. 2016. Hierarchical attention networks for document classification. In NAACL, pages 1480-1489.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
