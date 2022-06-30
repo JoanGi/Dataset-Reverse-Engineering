@@ -1,5 +1,4 @@
 from distutils.log import info
-import datadesc
 from src.utils.Extractor import get_dataset_structure, extract_data_paper, extract_data_profile, extract_huggingFaceDataInfo, extract_schema_org, extract_readme_github
 from sources.questions.Questions import get_questions
 from src.schemaOrgMap import SchemaOrgMap
@@ -11,6 +10,7 @@ from collections import defaultdict
 
 
 if __name__ == '__main__': 
+
     # ----------------------------------------------------------------
     # Variables to fill by the user
     # ----------------------------------------------------------------
@@ -54,9 +54,8 @@ if __name__ == '__main__':
 
     # ----------------------------------------------------------------
     # Mapping into the DSL from data.json (HuggingFace)
-    # ----------------------------------------------------------------
     ## TO DO
-
+    # ----------------------------------------------------------------
 
     # ----------------------------------------------------------------
     # Processing the extracted natural text
@@ -97,10 +96,12 @@ if __name__ == '__main__':
     ## Use the answers to refine questions
     ## TO DO
     # ----------------------------------------------------------------
-     ## Prepare outfiles
-    #meta = datasetDescription['dataset'].metadata
+    
+    
+    # ----------------------------------------------------------------
+    ## Prepare outfiles
+    # ----------------------------------------------------------------
 
-    #dest = datasetDescription['dataset'].__dict__
     datadescOut = open('out/datasetDescription.json', "w")
     print(json.dumps(datasetDescription, indent=2), file=datadescOut)
     datadescOut.flush()
@@ -113,6 +114,3 @@ if __name__ == '__main__':
     print(json.dumps(EmbeddingsBertOutput, indent=2), file=Emoutfile)
     Emoutfile.flush()
 
-  
-
-    print('ok')
