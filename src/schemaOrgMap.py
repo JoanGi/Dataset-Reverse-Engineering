@@ -1,3 +1,4 @@
+from collections import defaultdict
 
 class SchemaOrgMap:
 
@@ -14,16 +15,16 @@ class SchemaOrgMap:
         
             ### Title and identifier
             if 'name' in metadataSchemaOrg:
-                dataset.metadata['Title'] = metadataSchemaOrg['name']
+                dataset['metadata']['Title'] = metadataSchemaOrg['name']
             if 'issn' in metadataSchemaOrg:
-                dataset.metadata['UniqueIdentifier'] = metadataSchemaOrg['issn']
+                dataset['metadata']['Unique-Identifier'] = metadataSchemaOrg['issn']
             else:  
                 if 'identifier' in metadataSchemaOrg:
-                    dataset.metadata['UniqueIdentifier'] = metadataSchemaOrg['identifier']
+                    dataset['metadata']['Unique-Identifier'] = metadataSchemaOrg['identifier']
 
             ### Versioning
             if 'version' in metadataSchemaOrg:
-                dataset.metadata['Version'] = metadataSchemaOrg['version']
+                dataset['metadata']['Version'] = metadataSchemaOrg['version']
 
             ### Description
             if 'description' in metadataSchemaOrg:
@@ -33,13 +34,14 @@ class SchemaOrgMap:
             
             ### Licenses and Distribution
             if 'license' in metadataSchemaOrg:
-                dataset.metadata['Licenses'] = metadataSchemaOrg['license']
+                dataset['metadata']['Licenses'].append(metadataSchemaOrg['license'])
+
             if 'isAccessibleForFree' in metadataSchemaOrg:
-                dataset.metadata['Distribution']['isPublic'] = metadataSchemaOrg['isAccessibleForFree'];
+                dataset['metadata']['Distribution']['isPublic'] = metadataSchemaOrg['isAccessibleForFree'];
             if 'distribution' in metadataSchemaOrg:
-                dataset.metadata['Distribution']['How is distributed'] = metadataSchemaOrg['distribution'];
+                dataset['metadata']['Distribution']['How is distributed'] = metadataSchemaOrg['distribution'];
             if 'copyrightNotice' in metadataSchemaOrg:
-                dataset.metadata['Distirbution']['Distribution Licenses'] = metadataSchemaOrg['copyrightNotice']
+                dataset['metadata']['Distirbution']['Distribution Licenses'] = metadataSchemaOrg['copyrightNotice']
 
             ### Usages
             if 'usageInfo' in metadataSchemaOrg:
@@ -47,19 +49,19 @@ class SchemaOrgMap:
 
             #### Dates
             if 'dateCreated' in metadataSchemaOrg:
-                dataset.metadata['Release Data'] = metadataSchemaOrg['dateCreated']    
+                dataset['metadata']['Release Date'] = metadataSchemaOrg['dateCreated']    
             if 'dateModified' in metadataSchemaOrg:
-                dataset.metadata['Update Data'] = metadataSchemaOrg['dateModified']
+                dataset['metadata']['Update Date'] = metadataSchemaOrg['dateModified']
             if 'datePublished' in metadataSchemaOrg:
-                dataset.metadata['Published Data'] = metadataSchemaOrg['datePublished']
+                dataset['metadata']['Published Date'] = metadataSchemaOrg['datePublished']
 
             ## Citation
             if 'citation' in metadataSchemaOrg:
-                dataset.metadata['Citation'] = metadataSchemaOrg['citation']
+                dataset['metadata']['Citation'] = metadataSchemaOrg['citation']
 
             ### Accesiblity
             if 'accessibilitySummary' in metadataSchemaOrg:
-                dataset.socialConcerns["Social Issues"].append(
+                dataset['socialConcerns']["Social Issues"].append(
                     {
                     "Issue Name":'Accesiblity',
                     "Description": metadataSchemaOrg['accessibilitySummary']
@@ -73,37 +75,35 @@ class SchemaOrgMap:
                     keywordRow = keywordRow.split(',')
                     if (keywordRow[0] == 'subject'):
                         for key in keywordRow:
-                            dataset.metadata['Area'].append(key) # TODO allow multi tags in AREA
+                            dataset['metadata']['Area'].append(key) # TODO allow multi tags in AREA
                     elif (keywordRow[0] == 'technique'):
                         for key in keywordRow:
-                            dataset.metadata['Description']['Tasks'].append(key)
+                            dataset['metadata']['Description']['Tasks'].append(key)
                     else:
                         for key in keywordRow:
-                            dataset.metadata['Tags'].append(key)
+                            dataset['metadata']['Tags'].append(key)
 
 
             ## Authors
             if 'author' in metadataSchemaOrg:
+                #dataset['metadata']['Authoring']['Authors'] = {}
                 for author in metadataSchemaOrg['author']:
-                    dataset.metadata['Authoring']['Authors'].append(author)
+                    dataset['metadata']['Authoring']['Authors'].append(author)
             elif 'creator' in metadataSchemaOrg:
-                dataset.metadata['Authoring']['Authors'].append(metadataSchemaOrg['creator'])
+                dataset['metadata']['Authoring']['Authors'].append(metadataSchemaOrg['creator'])
 
             ### Funders
             if 'funders' in metadataSchemaOrg:
-                dataset.metadata['Authoring']['Funders'].append(metadataSchemaOrg['funders'])
+                dataset['metadata']['Authoring']['Funders'].append(metadataSchemaOrg['funders'])
             if 'funding' in metadataSchemaOrg:
-                dataset.metadata['Authoring']['Funders'].append(metadataSchemaOrg['funding'])
+                dataset['metadata']['Authoring']['Funders'].append(metadataSchemaOrg['funding'])
             
             ### Mantainers
             if 'maintainer' in metadataSchemaOrg:
-                dataset.metadata['Authoring']['Mantainers'].append(metadataSchemaOrg['mantainer'])
+                dataset['metadata']['Authoring']['Mantainers'].append(metadataSchemaOrg['mantainer'])
 
             ### Spatial Reference
             ##if 'spatialCoverage' in metadataSchemaOrg:
-                ## TODO
-            ### Spatial Reference
-            ##if 'temporalCoverage' in metadataSchemaOrg:
                 ## TODO
 
 

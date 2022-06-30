@@ -20,7 +20,7 @@ class SemanticSearch:
 
        
 
-    def search(self, datasetDescription, naturalText, queries):
+    def search(self, naturalText, queries, modelName):
 
         paragraphs = []
 
@@ -42,6 +42,7 @@ class SemanticSearch:
         ##
         readmeFormatted = [{'paragraphs' : naturalText['readme'].replace("\r\n", "\n").split("\n\n")}]
         answer = self.get_passages(readmeFormatted)
+        ## A
         for paragraph in answer['paragraphs']:
             paragraphs.append(paragraph) 
         for passage in answer['passages']:
@@ -90,8 +91,8 @@ class SemanticSearch:
             output.append(output_data)
             print("==========")
         print("Search took {:.2f} seconds".format(time.time() - start_time))
-        print(json.dumps(output, indent=2), file=outfile)
-        outfile.flush()
+    
+        return output
         
 
     def get_passages(self,sections):

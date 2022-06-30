@@ -12,6 +12,121 @@ from asyncio.windows_events import NULL
 import os
 from datasets import get_dataset_infos
 
+def get_dataset_structure():
+    return {
+        'metadata' :  {
+            "Title": '',
+            "Unique-Identifier": '',
+            "Version": '',
+            "Release Date": 0,
+            "Update Date": 0,
+            "Published Date": 0,
+            "Citation": '',
+            "Description": {
+                "Purposes": '',
+                "Tasks": [{}],
+                "Gaps": ''
+            },
+            "Licenses": [],
+            "Tags": [''],
+            "Area": [''],
+            "Uses": {
+                "Past Uses": [{}],
+                "Recommended": [{}],
+                "Non-recommended": [{}],
+                "Uses repository": ['']
+            },
+            "Distribution": {
+                "Is public": '',
+                "How is distributed": '',
+                "Ditribution license": '',
+            },
+            "Authoring": {
+                "Authors": [],
+                "Funders": [],
+                "Mantainers": [],
+                "Erratum": '',
+                "Data Retention": '',
+                "Version lifecycle": '',
+                "Contribution guidelines": ''
+            }
+        },
+        'composition' : {
+            "Rationale": '',
+            "Total Size": '',
+            "Instances": 
+                {
+                    "Instance Name": '',
+                    "Description": '',
+                    "Type": '',
+                    "Attribute number": 0,
+                    "Size": 0,
+                    "Attributes": [
+                 
+                    ],
+                    "Statistics": [{
+
+                    }],
+                    "Consistency rules:":[{
+
+                    }]
+                }
+        },
+        'provenance' : {
+            "Curation Rationale": '',
+            "Gathering Processes": [
+                {
+                "ProcessName": '',
+                "Description": '',
+                "Type": '',
+                "Sources": [
+                    {
+                        "Source Name": '',
+                        "Description": '',
+                        "Noise": '',
+                    }
+                ],
+                "Related Instaces": '',
+                "Social Issues": '',
+                "When data was collectes":'',
+                "Process Demographics": '',
+                "Gather Requeriments": [] 
+                }
+            ],
+            "Labeling Processes": [
+                {
+                    "ProcessName": '',
+                    "Description": '',
+                    "Type": '',
+                    "Labels": [],
+                    "Labeling Team": [{
+                        "Description": '',
+                        "Type": '',
+                        "Demographics": [],
+                    }],
+                    "Labeling Requeriments": []
+                }
+            ],
+            "Preprocesses": [
+                {
+                    "ProcessName": '',
+                    "Description": '',
+                }
+            ]
+        },
+        'socialConcerns' : {
+            "Rationale": '',
+            "Social Issues": [
+                {
+                    "Issue Name": '',
+                    "Type": '',
+                    "Related Attributes": [],
+                    "Description": ''
+                }
+            ]
+        }
+    }
+
 
 def extract_huggingFaceDataInfo(datasetName):
     return get_dataset_infos(datasetName)
